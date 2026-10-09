@@ -1,0 +1,415 @@
+/* ==========================================================================
+   Google Sites Aristotle / Simple Theme
+   Designed for Dev Chetan (Chetan Salvi) - Privacy Policy
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --sites-bg-page: #f8f9fa;
+  --sites-bg-card: #ffffff;
+  --sites-header-color: rgba(34, 110, 147, 1);
+  --sites-header-overlay: rgba(33, 33, 33, 0.4);
+  --sites-text-title: #202124;
+  --sites-text-body: rgba(33, 33, 33, 1);
+  --sites-text-muted: #5f6368;
+  --sites-link: rgba(0, 101, 128, 1);
+  --sites-link-hover: #004557;
+  --sites-font-family: 'Lato', 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  --sites-border-color: #dadce0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  background-color: var(--sites-bg-page);
+}
+
+body {
+  font-family: var(--sites-font-family);
+  background-color: var(--sites-bg-page);
+  color: var(--sites-text-body);
+  line-height: 1.6667;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Header Navigation Bar (Google Sites Style)
+   ========================================================================== */
+.sites-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sites-navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sites-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.sites-brand svg {
+  display: block;
+}
+
+.sites-nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+}
+
+.sites-nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sites-nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sites-nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Header Hero Banner (Aristotle / Simple Theme)
+   ========================================================================== */
+.sites-header-banner {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--sites-header-color);
+  background-image: url('../assets/simple-header-blended-small.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 24px 60px 24px;
+  overflow: hidden;
+}
+
+.sites-header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--sites-header-overlay);
+  display: block;
+  z-index: 1;
+}
+
+.sites-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sites-header-title {
+  color: #ffffff;
+  font-family: var(--sites-font-family);
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Main Content Container (Google Sites Canvas)
+   ========================================================================== */
+.sites-main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: var(--sites-bg-card);
+  padding: 56px 64px 80px 64px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.08);
+  min-height: 60vh;
+}
+
+/* Document Title (H1) */
+.sites-doc-title {
+  font-family: var(--sites-font-family);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--sites-text-title);
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: normal;
+}
+
+/* Effective date line */
+.sites-doc-effective {
+  font-family: var(--sites-font-family);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--sites-text-title);
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+/* Section Headings (H2) */
+.sites-section-title {
+  font-family: var(--sites-font-family);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--sites-text-title);
+  line-height: 1.35;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+/* Subheadings (H3) */
+.sites-subsection-title {
+  font-family: var(--sites-font-family);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--sites-text-title);
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Paragraphs */
+.sites-main-container p {
+  font-family: var(--sites-font-family);
+  font-size: 14.5px;
+  line-height: 1.6667;
+  color: var(--sites-text-body);
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.sites-main-container strong {
+  font-weight: 700;
+  color: var(--sites-text-title);
+}
+
+/* Unordered Lists */
+.sites-main-container ul {
+  margin: 10px 0 16px 0;
+  padding-left: 28px;
+  list-style-type: disc;
+}
+
+.sites-main-container li {
+  font-family: var(--sites-font-family);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--sites-text-body);
+  margin-bottom: 6px;
+}
+
+.sites-main-container li:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+.sites-main-container a,
+.sites-footer a {
+  color: var(--sites-link);
+  text-decoration: underline;
+  word-break: break-word;
+  transition: color 0.15s ease;
+}
+
+.sites-main-container a:hover,
+.sites-footer a:hover {
+  color: var(--sites-link-hover);
+}
+
+.sites-main-container a:visited {
+  color: var(--sites-link);
+}
+
+/* Contact Details Block */
+.sites-contact-list {
+  margin: 12px 0 20px 0;
+}
+
+.sites-contact-list p {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Google Sites Bottom Info / Footer
+   ========================================================================== */
+.sites-footer {
+  border-top: 1px solid var(--sites-border-color);
+  background-color: var(--sites-bg-page);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--sites-text-muted);
+}
+
+.sites-footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.sites-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.sites-footer-links a {
+  color: var(--sites-text-muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.sites-footer-links a:hover {
+  color: var(--sites-text-title);
+  text-decoration: underline;
+}
+
+/* Google Sites corner info badge */
+.sites-info-badge {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f6368;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.sites-info-badge:hover {
+  background: #ffffff;
+  transform: scale(1.08);
+  color: #202124;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .sites-navbar-inner {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sites-nav-links {
+    gap: 4px;
+  }
+
+  .sites-nav-links a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .sites-header-banner {
+    min-height: 240px;
+    padding: 70px 16px 40px 16px;
+  }
+
+  .sites-header-title {
+    font-size: 30px;
+  }
+
+  .sites-main-container {
+    padding: 36px 24px 60px 24px;
+    box-shadow: none;
+  }
+
+  .sites-doc-title {
+    font-size: 23px;
+  }
+
+  .sites-section-title {
+    font-size: 18px;
+    margin-top: 28px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sites-header-banner {
+    min-height: 200px;
+    padding: 64px 14px 30px 14px;
+  }
+
+  .sites-header-title {
+    font-size: 26px;
+  }
+
+  .sites-main-container {
+    padding: 28px 16px 48px 16px;
+  }
+
+  .sites-doc-title {
+    font-size: 22px;
+  }
+
+  .sites-section-title {
+    font-size: 17px;
+  }
+
+  .sites-main-container p,
+  .sites-main-container li {
+    font-size: 14px;
+  }
+}
