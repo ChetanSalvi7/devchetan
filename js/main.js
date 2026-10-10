@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   copyButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const email = btn.getAttribute('data-email') || 'fiveman.developer@gmail.com';
+      const email = btn.getAttribute('data-email') || 'ghostdeveloper9@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
         showToast('Email address copied to clipboard!');
       }).catch(() => {
